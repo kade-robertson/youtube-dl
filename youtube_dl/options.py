@@ -702,6 +702,10 @@ def parseOpts(overrideArguments=None):
         dest='autonumber_start', metavar='NUMBER', default=1, type=int,
         help='Specify the start value for %(autonumber)s (default is %default)')
     filesystem.add_option(
+        '--autonumber-offset',
+        dest='autonumber_offset', metavar='NUMBER', default=0, type=int,
+        help='Specify an optional offset for autonumber, used as %(autonumberoffset)s')
+    filesystem.add_option(
         '--restrict-filenames',
         action='store_true', dest='restrictfilenames', default=False,
         help='Restrict filenames to only ASCII characters, and avoid "&" and spaces in filenames')
